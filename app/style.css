@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #fff;
+  font-family: "Montserrat", "Segoe UI", Arial, sans-serif;
+}
+
+/* Carte centrale */
+.carte {
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+  min-height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.connexion,
+.bienvenue {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Partie gauche */
+.connexion {
+  background: #fff;
+}
+
+.connexion form {
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connexion h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.connexion input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  border: none;
+  background: #eee;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.connexion input:focus {
+  outline: 2px solid #ff4b2b;
+}
+
+.oublie {
+  margin: 10px 0 20px;
+  color: #333;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.oublie:hover {
+  text-decoration: underline;
+}
+
+/* Partie droite */
+.bienvenue {
+  color: #fff;
+  background: linear-gradient(to right, #ff4b6e, #ff41c0);
+}
+
+.bienvenue h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.bienvenue p {
+  max-width: 260px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  padding: 12px 45px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+}
+
+.btn-plein {
+  border: 1px solid #ff4b2b;
+  background: #ff4b2b;
+  color: #fff;
+}
+
+.btn-contour {
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+/* Mobile : les deux parties s'empilent */
+@media (max-width: 640px) {
+  .carte {
+    flex-direction: column;
+  }
+
+  .connexion,
+  .bienvenue {
+    padding: 32px 24px;
+  }
+}
